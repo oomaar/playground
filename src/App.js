@@ -1,9 +1,10 @@
 import React from 'react';
+import Slider from './components/Slider';
 
 const App = () => {
     return (
         <div>
-            <h1>Project 2: Carousel</h1>
+            <Slider />
         </div>
     )
 }
