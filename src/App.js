@@ -1,12 +1,7 @@
-import React from 'react';
-import Slider from './components/Slider';
-
-const App = () => {
+export const App = () => {
     return (
         <div>
-            <Slider />
+            React Application
         </div>
-    )
-}
-
-export default App;
+    );
+};
