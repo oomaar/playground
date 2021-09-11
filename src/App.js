@@ -1,7 +1,9 @@
+import { Navbar } from "./components";
+
 export const App = () => {
     return (
         <div>
-            React Application
+            <Navbar />
         </div>
     );
 };
