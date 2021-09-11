@@ -33,17 +33,17 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const Button = styled.button`
-  color: #cf117a;
+  color: ${({ theme }) => theme.colors.firstColor};
   font-size: clamp(1rem, 1.5vw, 1.5rem);
   background: transparent;
   padding: 0.5rem 1rem;
-  border: 2px solid #cf117a;
+  border: 2px solid ${({ theme }) => theme.colors.firstColor};
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 
   :hover {
-    background-color: #cf117a;
+    background-color: ${({ theme }) => theme.colors.firstColor};
     color: #fff;
   }
 `;
