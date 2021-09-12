@@ -1,7 +1,10 @@
+import { Feed } from "./components";
+
+
 export const App = () => {
     return (
         <div>
-            Application
+            <Feed />
         </div>
     );
 };
