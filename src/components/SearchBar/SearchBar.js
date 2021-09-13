@@ -5,6 +5,9 @@ import { fetchVideos } from "../../redux/slices/videoSlice";
 import propTypes from "prop-types";
 import {
     Container,
+    MainContainer,
+    Form,
+    Input,
 } from "./styledSearchBar";
 
 const SearchBar = ({ fetchVideos }) => {
@@ -23,15 +26,17 @@ const SearchBar = ({ fetchVideos }) => {
 
     return (
         <Container>
-            <form onSubmit={e => handleSubmit(e)}>
-                <input
-                    type="text"
-                    value={search}
-                    required
-                    placeholder="Enter your search"
-                    onChange={e => setSearch(e.target.value)}
-                />
-            </form>
+            <MainContainer>
+                <Form onSubmit={e => handleSubmit(e)}>
+                    <Input
+                        type="text"
+                        value={search}
+                        required
+                        placeholder="Enter your search"
+                        onChange={e => setSearch(e.target.value)}
+                    />
+                </Form>
+            </MainContainer>
         </Container>
     );
 };
