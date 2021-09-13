@@ -1,10 +1,9 @@
-import { Feed } from "./components";
-
+import { Home } from "./screens/Home/Home";
 
 export const App = () => {
     return (
         <div>
-            <Feed />
+            <Home />
         </div>
     );
 };
