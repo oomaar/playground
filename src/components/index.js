@@ -1,2 +1,2 @@
 export { Navbar } from "./Navbar/Navbar";
-export { Feed } from "./Feed/Feed";
+export { default as Feed } from "./Feed/Feed";

@@ -3,6 +3,8 @@ import thunk from 'redux-thunk';
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_COMPOSE__ || compose;
 
-const rootReducer = combineReducers({});
+const rootReducer = combineReducers({
+    as: () => "gd"
+});
 
 export const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)));
