@@ -1,3 +1,4 @@
+import { SearchBar } from "..";
 import {
     Nav,
     Logo,
@@ -7,12 +8,15 @@ import {
 
 export const Navbar = () => {
     return (
-        <Nav>
-            <Logo>Video API</Logo>
-            <ButtonsContainer>
-                <Button>Likes</Button>
-                <Button>Videos</Button>
-            </ButtonsContainer>
-        </Nav>
+        <div>
+            <Nav>
+                <Logo>Video API</Logo>
+                <ButtonsContainer>
+                    <Button>Likes</Button>
+                    <Button>Videos</Button>
+                </ButtonsContainer>
+            </Nav>
+            <SearchBar />
+        </div>
     );
 };
