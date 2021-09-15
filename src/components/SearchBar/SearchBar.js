@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { useHistory } from "react-router";
-import { connect } from "react-redux";
-import { fetchVideos } from "../../redux/slices/videoSlice";
-import propTypes from "prop-types";
+import history from "../../Global/history";
 import {
     Container,
     MainContainer,
@@ -10,9 +7,8 @@ import {
     Input,
 } from "./styledSearchBar";
 
-const SearchBar = ({ fetchVideos }) => {
+export const SearchBar = () => {
     const [search, setSearch] = useState("");
-    const history = useHistory();
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -20,7 +16,6 @@ const SearchBar = ({ fetchVideos }) => {
             pathname: "/videos",
             search: `search=${search}`
         });
-        fetchVideos();
         setSearch('');
     };
 
@@ -40,9 +35,3 @@ const SearchBar = ({ fetchVideos }) => {
         </Container>
     );
 };
-
-SearchBar.propTypes = {
-    fetchVideos: propTypes.func.isRequired
-}
-
-export default connect(null, { fetchVideos })(SearchBar);
